@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Facts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: #F8F9FA;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #009BFF;
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        .fact-display {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button" onclick="showRandomFact()">Show a Fact</button>
+        <div id="factDisplay" class="fact-display"></div>
+    </div>
+    <script>
+        const facts = [
+            "The class teacher has been teaching for over 15 years, inspiring hundreds of students along the way.",
+            "They have a Master's degree in Education from a renowned university.",
+            "Apart from teaching, they are passionate about gardening and have a beautiful garden at home.",
+            "They have published several articles on innovative teaching methods in well-known educational journals.",
+            "The teacher is also a certified yoga instructor and incorporates mindfulness exercises into the classroom.",
+            "They were awarded 'Teacher of the Year' twice in the past five years for their exceptional dedication.",
+            "The class teacher loves to travel and has visited over 20 countries, often bringing back stories to share with the class.",
+            "They are fluent in three languages, which enhances their teaching capabilities and cultural understanding.",
+            "Every year, they organize a community service project, encouraging students to give back to the community.",
+            "They are known for their innovative use of technology in the classroom, constantly integrating new tools to enhance learning."
+        ];
+
+        function showRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
